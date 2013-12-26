@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var argv = require('optimist').argv,
+	fs = require('fs'),
+	EXAMPLES = __dirname+'/examples';
+
+if (argv.list || !argv._.length) return list();
+
+function list (talk) {
+	var fd = fs.statSync(EXAMPLES);
+
+	if (!fd || !fd.isDirectory()) {
+		return talk ? console.log('Cannot find examples directory') : null;
+	};
+
+	var files = fs.readdirSync(EXAMPLES).map(function(fd){
+		return fd;
+	});
+
+	if (talk) {
+		files.unshift('\nAvailable example grunt files:\n');
+		console.log(files.join('\n'));
+	};
+
+	return files;
+};
+
+function moveFile (file) {
+	
+};
