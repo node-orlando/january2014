@@ -33,4 +33,31 @@ grunt-cli v0.1.11
 grunt v0.4.2
 ```
 
+Great, now you can start exploring. To use the example grunt files, you can copy them from the `examples/` directory to `Gruntfile.js` or you can use the `./changegruntfile` script that will list and move the files for you.
 
+```
+$ ./changegruntfile --list
+
+Available example grunt files:
+
+markdown.js
+uglify.js
+... more files
+
+Usage: $ ./changegruntfile --file=uglify.js
+
+$ ./changegruntfile --file=uglify.js
+
+Now using example uglify.js Gruntfile
+
+'use strict';
+
+module.exports = function(grunt) {
+
+ // file contents	
+		
+};
+
+```
+
+Now that you have a Gruntfile.js in place, go ahead and run `$ grunt`! You can see that something happened. All files that are created with our Grunt files will land in the `dist` directory. 

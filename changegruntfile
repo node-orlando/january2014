@@ -4,7 +4,10 @@
 
 var argv = require('optimist').argv,
 	fs = require('fs'),
+	mkdirp = require('mkdirp'),
 	EXAMPLES = __dirname+'/examples/';
+
+mkdirp(__dirname+'/dist', function(err){});
 
 if ((argv.list || !argv._.length) && !argv.file) return list(1);
 
