@@ -4,9 +4,13 @@
 
 var argv = require('optimist').argv,
 	fs = require('fs'),
-	EXAMPLES = __dirname+'/examples';
+	EXAMPLES = __dirname+'/examples/';
 
-if (argv.list || !argv._.length) return list();
+if ((argv.list || !argv._.length) && !argv.file) return list(1);
+
+if (argv.file) {
+	moveFile(argv.file);
+};
 
 function list (talk) {
 	var fd = fs.statSync(EXAMPLES);
@@ -28,5 +32,23 @@ function list (talk) {
 };
 
 function moveFile (file) {
-	
+	if (!~file.indexOf('.js')) file += '.js';
+
+	var fdLoc = EXAMPLES+file,
+		fd = null;
+
+	try {
+		fd = fs.statSync(fdLoc);
+	} catch (e) {
+		console.log('Cannot find example file: %s', fdLoc);
+		return list(1);
+	};
+
+	var src = fs.createReadStream(fdLoc),
+		dest = fs.createWriteStream(__dirname+'/Gruntfile.js');
+
+	src.pipe(dest);
+	src.pipe(process.stdout);
+
+	console.log('Now using example %s Gruntfile', file);
 };
