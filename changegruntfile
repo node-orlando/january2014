@@ -25,6 +25,7 @@ function list (talk) {
 
 	if (talk) {
 		files.unshift('\nAvailable example grunt files:\n');
+		files.push('\nUsage: $ ./changegruntfile --file=uglify.js\n');
 		console.log(files.join('\n'));
 	};
 
@@ -50,5 +51,5 @@ function moveFile (file) {
 	src.pipe(dest);
 	src.pipe(process.stdout);
 
-	console.log('Now using example %s Gruntfile', file);
+	console.log('\nNow using example %s Gruntfile\n', file);
 };
