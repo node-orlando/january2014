@@ -14,7 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-uglify": "~0.2.7"
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-sass": "~0.6.0"
   },
   "dependencies": {
     "optimist": "~0.6.0",

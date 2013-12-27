@@ -1,0 +1,20 @@
+// ********************
+//
+// Import Modules
+//
+// ********************
+
+@import "partials/base";
+
+// ********************
+//
+// Import Partials
+//
+// *********************
+
+@import "partials/typography";
+@import "partials/sections";
+
+.being-played {
+	opacity: 0.4;
+}

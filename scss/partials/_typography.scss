@@ -1,0 +1,50 @@
+// ********************
+//
+// Typography Styles
+//
+// ********************
+
+body {
+  font-family: $base-type;
+  font-size: $base-type-size;
+  background: #000;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: $type-regular;
+}
+
+.start-type {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 4px;
+  font-weight: $type-light;
+}
+
+.token-type {
+  @extend .start-type;
+  text-decoration: underline;
+}
+
+.quarter-btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $type-light;
+  text-align: center;
+  text-decoration: none;
+}
+
+.desc {
+  color: white;
+  text-align: center;
+  margin-top: -30px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 85%;
+  letter-spacing: 2px;
+}

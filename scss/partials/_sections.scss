@@ -1,0 +1,127 @@
+// ********************
+//
+// Base Section Layout
+//
+// ********************
+
+//
+// Quadrant Layout
+//
+
+.q1, .q2, .q3, .q4 {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  &:active {
+    @include q-press;
+    @include q-press-smooth;
+  }
+}
+
+.q1 {
+  top: 0;
+  right: 0;
+  background-color: $simon-red;
+  &:hover {
+    background-color: lighten($simon-red, 2%);
+  }
+}
+
+.q2 {
+  top: 0;
+  left: 0;
+  background-color: $simon-green;
+  &:hover {
+    background-color: lighten($simon-green, 2%);
+  }
+}
+
+.q3 {
+  bottom: 0;
+  left: 0;
+  background-color: $simon-yellow;
+  &:hover {
+    background-color: lighten($simon-yellow, 2%);
+  }
+}
+
+.q4 {
+  bottom: 0;
+  right: 0;
+  background-color: $simon-blue;
+  &:hover {
+    background-color: lighten($simon-blue, 2%);
+  }
+}
+
+//
+// Console Layout
+//
+
+
+.console {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  background: $simon-plastic;
+  position: absolute;
+  margin: -125px 0 0 -125px;
+  left: 50%;
+  top: 50%;
+  z-index: 999;
+
+  .console-bottomHalf {
+    width: 250px;
+    height: 125px;
+    border-bottom-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+    background: #676767;
+    margin-top: 38px;
+  }
+
+  .console-bottomQuarterRight {
+    width: 125px;
+    height: 125px;
+    border-bottom-right-radius: 125px;
+    background: #666;
+    margin-left: 125px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .console-bottomQuarterLeft {
+    width: 125px;
+    height: 125px;
+    border-bottom-left-radius: 125px;
+    background: #222;
+    position: absolute;
+    bottom: 0;
+  }
+
+  a {
+    color: white;
+  }
+
+  .token-type {
+    display: none;
+  }
+}
+
+//
+// Link Hack
+// 
+
+.link-panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  span {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+  }
+}

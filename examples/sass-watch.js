@@ -6,13 +6,9 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		sass: {
 			options: {
-				
+				style: 'expanded'
 			},
-			// dev is our `task target`
 			dev: {
-				options: {
-					style: 'expanded'
-				},
 				files: {
 					'dist/styles.dev.css': base+'/main.scss'
 				},
@@ -26,8 +22,16 @@ module.exports = function(grunt) {
 				},
 			},
 		},	
+		watch: {
+			scripts: {
+				files: {
+				
+				}
+			},
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default', 'sass:dev');
 };

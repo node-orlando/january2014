@@ -1,0 +1,14 @@
+// ********************
+//
+// Base Mixins
+//
+// ********************
+
+@mixin q-press {
+    width: 49%;
+    height: 49%;
+}
+
+@mixin q-press-smooth {
+	transition: width 0.1s, height 0.1s;
+}
