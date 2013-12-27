@@ -19,7 +19,7 @@ If you don't have the grunt CLI installed, go ahead and install it now. Be sure 
 $ npm install -g grunt-cli
 ```
 
-To start running Grunt, install the necesarry dependendencies, this will install the dependencies listed in your package.json.
+To start running Grunt, install the necesarry dependendencies, this will install the dependencies listed in your package.json. If you look at the package.json, you'll notice all the grunt dependencies are under the `devDependencies` object, this is because you probably won't need them in your production environment, it's also recommeneded by grunt. To save `devDependencies`,  use the `--save-dev` flag when installing dependencies.
 
 ```
 $ npm install
