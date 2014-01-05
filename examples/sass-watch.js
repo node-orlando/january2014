@@ -23,15 +23,14 @@ module.exports = function(grunt) {
 			},
 		},	
 		watch: {
-			scripts: {
-				files: {
-				
-				}
+			sass: {
+				files: ['./public/sass/main.scss', './public/sass/partials/**.scss', './public/sass/modules/**.scss'],
+				tasks: ['sass']
 			},
 		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', 'sass:dev');
+	grunt.registerTask('default', 'watch');
 };
