@@ -36,7 +36,7 @@ grunt v0.4.2
 Great, now you can start exploring. To use the example grunt files, you can copy them from the `examples/` directory to `Gruntfile.js` or you can use the `./changegruntfile` script that will list and move the files for you.
 
 ```
-$ ./changegruntfile --list
+$ ./changegruntfile
 
 Available example grunt files:
 
@@ -44,9 +44,9 @@ markdown.js
 uglify.js
 ... more files
 
-Usage: $ ./changegruntfile --file=uglify.js
+Usage: $ ./changegruntfile uglify.js
 
-$ ./changegruntfile --file=uglify.js
+$ ./changegruntfile uglify.js
 
 Now using example uglify.js Gruntfile
 

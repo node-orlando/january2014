@@ -9,10 +9,10 @@ var argv = require('optimist').argv,
 
 mkdirp(__dirname+'/dist', function(err){});
 
-if ((argv.list || !argv._.length) && !argv.file) return list(1);
+if (!argv._.length && !argv.file) return list(1);
 
-if (argv.file) {
-	moveFile(argv.file);
+if (argv._.length || argv.file) {
+	moveFile(argv._[0]);
 };
 
 function list (talk) {
@@ -22,13 +22,13 @@ function list (talk) {
 		return talk ? console.log('Cannot find examples directory') : null;
 	};
 
-	var files = fs.readdirSync(EXAMPLES).map(function(fd){
+	var files = fs.readdirSync(EXAMPLES).map(function(fd) {
 		return fd;
 	});
 
 	if (talk) {
 		files.unshift('\nAvailable example grunt files:\n');
-		files.push('\nUsage: $ ./changegruntfile --file=uglify.js\n');
+		files.push('\nUsage: $ ./changegruntfile uglify.js\n');
 		console.log(files.join('\n'));
 	};
 
