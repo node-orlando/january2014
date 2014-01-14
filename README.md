@@ -33,7 +33,9 @@ grunt-cli v0.1.11
 grunt v0.4.2
 ```
 
-Great, now you can start exploring. To use the example grunt files, you can copy them from the `examples/` directory to `Gruntfile.js` or you can use the `./changegruntfile` script that will list and move the files for you.
+Great, now you can start exploring!
+
+To use the example grunt files, you can copy them from the `examples/` directory to `Gruntfile.js` or you can use the `./changegruntfile` script that will list and move the files for you.
 
 ```
 $ ./changegruntfile --list
@@ -54,13 +56,13 @@ Now using example uglify.js Gruntfile
 
 module.exports = function(grunt) {
 
- // file contents	
-		
+ // file contents
+
 };
 
 ```
 
-Now that you have a Gruntfile.js in place, go ahead and run `$ grunt`! You can see that something happened. All files that are created with our Grunt files will land in the `dist` directory. 
+Now that you have a Gruntfile.js in place, go ahead and run `$ grunt`! You can see that something happened. All files that are created with our Grunt files will land in the `dist` directory.
 
 ## Rough Outline for the Meetup
 

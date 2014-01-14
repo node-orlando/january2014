@@ -21,11 +21,11 @@ module.exports = function(grunt) {
 					'dist/styles.prod.css': base+'/main.scss'
 				},
 			},
-		},	
+		},
 		watch: {
 			scripts: {
 				files: {
-				
+
 				}
 			},
 		},
