@@ -26,7 +26,7 @@ function markdown () {
 
 	marked(file, options, function(err, data){
 		if (err) done(false);
-		
+
 		fs.writeFileSync(__dirname+'/dist/readme.html', data, 'utf-8');
 		done();
 	});

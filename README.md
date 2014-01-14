@@ -71,4 +71,8 @@ Now that you have a Gruntfile.js in place, go ahead and run `$ grunt`! You can s
 	- what can you do with Grunt?
 - setting up a gruntfile
 - using grunt
+	- Markdown example
+	- Sass example
+	- Sass, Sass-Watch example
+	- MarkdownDirty example
 - (if we're lucky and get to it) making a grunt task
