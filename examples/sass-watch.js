@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					'dist/styles.prod.css': base+'/main.scss'
 				},
 			},
-		},	
+		},
 		watch: {
 			sass: {
 				files: ['./public/sass/main.scss', './public/sass/partials/**.scss', './public/sass/modules/**.scss'],

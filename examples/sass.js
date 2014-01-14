@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					'dist/styles.prod.css': base+'/main.scss'
 				},
 			},
-		},	
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
