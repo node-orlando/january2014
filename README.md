@@ -61,3 +61,12 @@ module.exports = function(grunt) {
 ```
 
 Now that you have a Gruntfile.js in place, go ahead and run `$ grunt`! You can see that something happened. All files that are created with our Grunt files will land in the `dist` directory. 
+
+## Rough Outline for the Meetup
+
+- introduction to Grunt (covered above)
+	- what is Grunt for?
+	- what can you do with Grunt?
+- setting up a gruntfile
+- using grunt
+- (if we're lucky and get to it) making a grunt task
